@@ -8,7 +8,7 @@ connectDB()
 .then(()=>{
     const port = process.env.PORT || 8000;
     app.listen(port,()=>{
-    `Server Listening at port ${port}`;
+    console.log(`Server Listening at port ${port}`);
     });
 })
 .catch((error)=>{
