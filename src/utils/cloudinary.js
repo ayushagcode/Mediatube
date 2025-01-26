@@ -34,7 +34,8 @@ const uploadOnCloudinary = async (localFilePath)=>{
         fs.unlink(localFilePath, (err)=>{
             if (err) {
                 console.error("Error removing local file:", err);
-            } else {
+            }
+            else {
                 console.log("Local file deleted successfully.");
             }
         })

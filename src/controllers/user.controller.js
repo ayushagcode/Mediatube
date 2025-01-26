@@ -187,7 +187,7 @@ const refreshAccessToken = asyncHandler(async(req, _,next)=>{
         // ya to cookies se access kar lo ya kya pta body se bhej rha ho
         const incomingRefreshToken = req.cookies.refreshToken || req.body.refreshToken;
     
-        if(incomingRefreshToken){
+        if(!incomingRefreshToken){
             throw new ApiError(401,"Unauthorized Request");
         }
         // now we have to verify also incoming token 
