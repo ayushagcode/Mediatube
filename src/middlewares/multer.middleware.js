@@ -9,8 +9,10 @@ const storage = multer.diskStorage({
       cb(null, file.originalname)
     //   read doc
     }
-  })
+  }) 
   
-export const upload = multer({
+const upload = multer({
     storage: storage,
 })
+
+export {upload};
