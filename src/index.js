@@ -3,7 +3,10 @@ import dotenv from "dotenv";
 import connectDB from "./db/db.js";
 import app from "./app.js";
 dotenv.config({path: './.env'});
-
+/*
+dotenv.config(); -> as it is present in the root
+directory then we can also write like this
+*/
 connectDB()
 .then(()=>{
     const port = process.env.PORT || 8000;

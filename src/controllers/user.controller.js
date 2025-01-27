@@ -286,7 +286,7 @@ const updateUserAvatar = asyncHandler(async(req,res)=>{
         throw new ApiError(400,"Error while uploading on avatar");
     }
     const user = await User.findByIdAndUpdate(
-        req.user?.id,
+        req.user?._id,
         {
             $set:{
                 avatar: avatar.url,
@@ -312,7 +312,7 @@ const updateUserCoverImage = asyncHandler(async(req,res)=>{
         throw new ApiError(400,"Error while uploading coverImage");
     }
     const user = await User.findByIdAndUpdate(
-        req.user?.id,
+        req.user?._id,
         {
             $set:{
                 coverImage: coverImage.url,
