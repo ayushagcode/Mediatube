@@ -12,7 +12,6 @@ app.use(express.json({limit:"16kb"})) // body-parser
 app.use(express.urlencoded({extended:true}));// to decode the url
 app.use(express.static("public")); // server static assets (images,css,js) from public folder
 app.use(cookieParser());//cookie parser
-
 // routes import -> like this only
 import userRouter from "./routes/user.routes.js";
 
